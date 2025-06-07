@@ -1,0 +1,24 @@
+<ngx-particles
+  [id]="'tsparticles'"
+  [options]="particlesOptions"
+  (particlesLoaded)="onParticlesLoaded($event)"
+></ngx-particles>
+
+<div class="menu-container">
+  <div
+    class="menu-item"
+    *ngFor="let item of menu"
+    (click)="onMenuClick(item)"
+  >
+    {{ item.label }}
+    <div class="sub-menu" *ngIf="item.expanded && item.children">
+      <div
+        class="sub-item"
+        *ngFor="let child of item.children"
+        (click)="onMenuClick(child, $event)"
+      >
+        {{ child.label }}
+      </div>
+    </div>
+  </div>
+</div>

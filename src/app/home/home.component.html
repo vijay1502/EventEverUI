@@ -1,0 +1,63 @@
+<div class="hero-section">
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">
+      <img src="../../assets/EventEverLogo.jpg" alt="Logo" />
+    </div>
+
+    <ul class="menu">
+      <li><a href="#" class="active">Home</a></li>
+      <li><a href="#">About us</a></li>
+      <li><a href="#">Offers</a></li>
+      <li><a href="#">News</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+
+    <form [formGroup]="searchForm" (ngSubmit)="onSearch()" class="search">
+      <input type="text" placeholder="Search..." formControlName="keyword" />
+      <button type="submit"><i class="fas fa-search"></i></button>
+    </form>
+  </nav>
+  
+</div>
+
+  <!-- Overlay Hero Text -->
+  <!-- <div class="hero-overlay">
+    <div class="bg-text">DISCOVER</div>
+    <h1>Discover new worlds</h1>
+  </div> -->
+  
+  <section class="search-banner">
+  <h2 style="font-family: 'Open Sans';">Find the Adventure of a lifetime</h2>
+
+  <form [formGroup]="searchFormFilter" (ngSubmit)="onSearchFilter()" class="search-bar">
+    <div class="form-group">
+      <label>Destination:</label>
+      <input type="text" formControlName="destination" placeholder="Keyword here" />
+    </div>
+
+    <div class="form-group">
+      <label>Adventure type:</label>
+      <select formControlName="adventureType">
+        <option value="">Categories</option>
+        <option *ngFor="let type of adventureTypes" [value]="type">{{ type }}</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label>Min price:</label>
+      <select formControlName="minPrice">
+        <option *ngFor="let price of prices" [value]="price">{{ price }}</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label>Max price:</label>
+      <select formControlName="maxPrice">
+        <option *ngFor="let price of prices" [value]="price">{{ price }}</option>
+      </select>
+    </div>
+
+    <button type="submit" class="find-btn">Find</button>
+  </form>
+</section>
