@@ -1,0 +1,199 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: url('../../assets/particles.gif') no-repeat center center fixed;
+  background-size: cover;
+  overflow: hidden;
+}
+/* Fullscreen Background */
+.gif-background {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background: url('../../assets/particles.gif') no-repeat center center fixed;
+  background-size: cover;
+  overflow: hidden;
+}
+
+/* Centered Content */
+.intro-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 10;
+}
+
+/* Fade In Keyframe */
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(30px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Fade Out Keyframe */
+@keyframes fadeOut {
+  0% { opacity: 1; transform: scale(1); }
+  100% { opacity: 0; transform: scale(0.5); }
+}
+
+/* "Welcome to" fades in early */
+.welcome-text {
+  font-size: 2.5rem;
+  font-weight: 400;
+  color: white;
+  opacity: 0;
+  animation: fadeIn 1s ease-in forwards;
+  animation-delay: 0.5s;
+}
+
+/* LOGO: fades in first, then fades out */
+.logo-img {
+  width: 200px;
+  height: auto;
+  margin: 20px auto;
+  display: block;
+  opacity: 1;
+  animation: fadeOut 2s ease-in-out forwards;
+  animation-delay: 2s;
+}
+
+.eventever-text {
+  font-family: 'Staatliches', sans-serif;
+  font-size: 3rem;
+  font-weight: normal;
+  text-transform: uppercase;
+  background: linear-gradient(to right, #D4AF37, #D4AF37, #D4AF37);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 2px 2px 10px rgba(255, 255, 255, 0.2);
+  letter-spacing: 8px;
+  opacity: 0;
+  animation: fadeIn 1.5s ease-out forwards;
+  animation-delay: 2s;
+}
+/* .eventever-text {
+  font-family: 'Monoton', cursive;
+  font-size: 2rem;
+  color: #D4AF37;
+  text-shadow: 0 0 8px black, 0 0 20px #D4AF37;
+  animation: fadeIn 2s ease-out forwards;
+  animation-delay: 2s;
+} */
+
+
+
+/* Keyframes */
+@keyframes logoFadeOut {
+  0% { opacity: 1; transform: scale(1); }
+  100% { opacity: 0; transform: scale(0.5); }
+}
+
+@keyframes textFadeIn {
+  0% { opacity: 0; transform: translateY(30px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 768px) {
+  .eventever-text {
+    font-size: 2.5rem;
+  }
+
+  .logo-img {
+    width: 120px;
+  }
+
+  .loader-container {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.rotating-logo {
+  width: 120px;
+  height: 120px;
+  animation: spin 3s linear infinite;
+}
+
+/* Keyframes */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+
+.loader-wrapper {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #000; /* or transparent */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.rotating-loader {
+  width: 100px;
+  height: 100px;
+  animation: spinWithPause 1.2s ease-in-out infinite;
+}
+
+@keyframes spinWithPause {
+  0%   { transform: rotate(0deg); }
+  90%  { transform: rotate(360deg); }
+  100% { transform: rotate(360deg); } /* pause on full rotation */
+}
+
+
+.intro-title {
+  position: fixed;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 10;
+  color: #ffcc66;
+  font-family: 'Staatliches', sans-serif;
+  font-size: 4rem;
+  background: black;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Loader */
+.loader-wrapper {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.rotating-loader {
+  width: 100px;
+  height: 100px;
+  animation: spinWithPause 1.2s ease-in-out infinite;
+}
+
+/* Spin with micro pause */
+@keyframes spinWithPause {
+  0%   { transform: rotate(0deg); }
+  90%  { transform: rotate(360deg); }
+  100% { transform: rotate(360deg); } /* 10% pause after full rotation */
+}
+
+}

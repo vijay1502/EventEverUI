@@ -1,0 +1,99 @@
+.bg-black {
+  background-color: #000 !important;
+}
+
+.text-gold {
+  color: #cdaa35f5 !important;
+}
+
+.navbar {
+  background-color: #1a1a1a !important;
+}
+
+.navbar-brand {
+  color: #cdaa35f5 !important;
+  font-weight: bold;
+}
+
+.navbar-brand:hover {
+  color: #ffcc00 !important;
+}
+
+hr {
+  border-color: #cdaa35f5;
+}
+
+.card {
+  background-color: #1e1e1e;
+  color: white;
+  border: 1px solid #cdaa35f5;
+}
+
+.card-header {
+  background-color: #1a1a1a;
+  color: #cdaa35f5;
+}
+
+textarea.form-control {
+  background-color: #111;
+  color: white;
+  border: 1px solid #cdaa35f5;
+}
+
+footer {
+  background-color: #1a1a1a;
+  color: #cdaa35f5;
+}
+
+footer h6 {
+  color: #ffcc00;
+}
+
+footer a {
+  color: #cdaa35f5;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+  color: #ffd700;
+}
+
+/* Carousel responsiveness */
+.carousel img {
+  width: 100%;
+  height: auto;
+  max-height: 220px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.carousel {
+  border: 2px solid #cdaa35f5;
+  border-radius: 8px;
+}
+
+h4, h5 {
+  color: #cdaa35f5;
+  font-weight: 600;
+}
+
+.gold{
+    color: #cdaa35f5;
+}
+
+.card-title {
+  color: #cdaa35f5;
+  font-weight: bold;
+}
+
+ul.list-unstyled li {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+canvas {
+  width: 100% !important;
+  height: auto !important;
+}
+

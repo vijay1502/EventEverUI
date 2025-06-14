@@ -1,0 +1,32 @@
+<div class="container mt-5">
+  <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel" *ngIf="events.length">
+    <ol class="carousel-indicators">
+      <li *ngFor="let event of events.slice(0, 4); let i = index"
+          [attr.data-target]="'#carouselExampleCaptions'"
+          [attr.data-slide-to]="i"
+          [class.active]="i === 0">
+      </li>
+    </ol>
+
+    <div class="carousel-inner">
+      <div *ngFor="let event of events.slice(0, 4); let i = index"
+           class="carousel-item"
+           [class.active]="i === 0">
+        <img [src]="event.imageUrl" class="d-block w-100" [alt]="event.title">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>{{ event.title }}</h5>
+          <p>{{ event.subtitle }}</p>
+        </div>
+      </div>
+    </div>
+
+    <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div>

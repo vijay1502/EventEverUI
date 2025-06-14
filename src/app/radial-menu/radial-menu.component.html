@@ -1,0 +1,60 @@
+<div class="space-container">
+  <!-- Particle Background GIF Layer -->
+  <div class="particle-bg"></div>
+
+  <!-- Header Section with Logo and Search -->
+<header class="app-header">
+    <div>
+          <img src="../../assets/EventEverLogo.jpg" alt="Logo" class="logo" />
+    </div>
+  <div class="search-bar">
+    <input type="text" placeholder="Search..." />
+    <button>Go</button>
+  </div>
+</header>
+
+  <!-- Connecting Lines -->
+  <svg class="connector-lines" width="100%" height="100%">
+    <line
+      *ngFor="let node of nodes"
+      [attr.x1]="center.x"
+      [attr.y1]="center.y"
+      [attr.x2]="node.x"
+      [attr.y2]="node.y"
+      stroke="white"
+      stroke-width="2"
+    />
+  </svg>
+
+  <!-- Center Node -->
+  <div
+    class="center-node"
+    [style.left.px]="center.x - radius"
+    [style.top.px]="center.y - radius"
+  >
+    {{ center.label }}
+  </div>
+
+  <!-- Outer Nodes -->
+  <!-- <div
+    class="node floating"
+    *ngFor="let node of nodes"
+    [style.left.px]="node.x - radius"
+    [style.top.px]="node.y - radius"
+    [style.background]="node.color"
+    (mousedown)="startDrag($event, node)"
+  >
+    {{ node.label }}
+  </div> -->
+  <div
+  class="node"
+  *ngFor="let node of nodes; let i = index"
+  [ngClass]="getNodeClass(i)"
+  [style.left.px]="node.x - radius"
+  [style.top.px]="node.y - radius"
+  [style.background]="node.color"
+  (mousedown)="startDrag($event, node)"
+>
+  {{ node.label }}
+</div>
+</div>

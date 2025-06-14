@@ -1,4 +1,5 @@
-import { Component} from '@angular/core';
+import { CommonModule, isPlatformBrowser } from '@angular/common';
+import { Component, Inject, OnInit, PLATFORM_ID} from '@angular/core';
 
 import { NgxParticlesModule } from '@tsparticles/angular';
 import { Container, Engine } from '@tsparticles/engine';
@@ -9,9 +10,20 @@ import { loadSlim } from '@tsparticles/slim';
   selector: 'app-particle-home',
   templateUrl: './particle-home.component.html',
   styleUrls: ['./particle-home.component.css'],
-  imports: [NgxParticlesModule]
+  imports: [NgxParticlesModule, CommonModule]
 })
-export class ParticleHomeComponent {
+export class ParticleHomeComponent implements OnInit{
+
+  constructor(@Inject(PLATFORM_ID) private platformId: Object) {}
+
+ ngOnInit() {
+  if (isPlatformBrowser(this.platformId)) {
+    // Run particle loading only in browser
+    this.loadParticles();
+  }
+}
+  loadParticles() {
+  }
 menu = [
     {
       label: 'Home',
