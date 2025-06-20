@@ -1,0 +1,133 @@
+.search-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.custom-search {
+  width: 100%;
+  padding: 6px 40px 6px 14px; /* Right padding for icon space */
+  border: 1px solid #cdaa35;
+  background: transparent;
+  color: #fff;
+  border-radius: 12px;
+}
+
+.custom-search::placeholder {
+  color: #cdaa35;
+  opacity: 0.6;
+}
+
+.custom-search:focus {
+  border-color: #f1c40f;
+  outline: none;
+  box-shadow: 0 0 5px rgba(205, 170, 53, 0.4);
+}
+
+.search-icon {
+  position: absolute;
+  top: 50%;
+  right: 14px;
+  transform: translateY(-50%);
+  color: #cdaa35;
+  font-size: 1rem;
+  pointer-events: none; /* Remove if you want click support */
+}
+
+.fade-row {
+  animation: fadeSlide 1s ease forwards;
+  opacity: 0;
+  animation-delay: 0.2s;
+}
+
+@keyframes fadeSlide {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  transition: all 0.4s ease-in-out;
+}
+
+.fade-in:hover {
+  background-color: #cdaa35;
+  color: #000;
+  transform: scale(1.03);
+}
+
+.event-create-wrapper{
+  position: relative;
+  width: 100%;
+  max-width: 50px;
+  margin: 0 auto;
+}
+.book-organizer-card {
+  border: 1px solid #ffc107;
+  border-radius: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.book-organizer-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 20px rgba(255, 193, 7, 0.2);
+}
+
+
+
+.book-organizer-color{
+  color: #f39405;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.profile-dropdown {
+  right: 0;
+  top: 35px;
+  width: 200px;
+  z-index: 1000;
+}
+
+.notification-box {
+  z-index: 1050;
+}
+
+.btn-gold {
+  background-color: #FFC107;
+  color: #000;
+  border: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-gold:hover {
+  background-color: #e6ac00;
+  color: #000;
+}
+
+.book-organizer-color {
+  color: #FF9900;
+}
+
+.search-wrapper input.custom-search {
+  border: 1px solid gold;
+  background-color: transparent;
+  color: gold;
+  padding-right: 40px;
+  border-radius: 25px;
+}
+
+.action-btn {
+  width: 180px;
+  height: 45px;
+  padding: 10px 20px;
+  font-weight: bold;
+  font-size: 0.95rem;
+}

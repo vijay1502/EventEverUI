@@ -1,0 +1,11 @@
+
+.feed-back-comment-color{
+  color: #f39405;
+}
+.action-btn {
+  width: 180px;
+  height: 45px;
+  padding: 10px 20px;
+  font-weight: bold;
+  font-size: 0.95rem;
+}

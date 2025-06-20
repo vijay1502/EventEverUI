@@ -1,0 +1,32 @@
+<div class="payment-card bg-black text-warning rounded p-2 shadow-lg flex-grow-1" style="max-width: 700px;">
+  <h5 class="text-warning mb-4 text-left">View All Payments</h5>
+
+  <!-- Table Header -->
+  <div class="row fw-bold border-bottom border-warning pb-2 ml-2 text-left">
+    <div class="col">Event</div>
+    <div class="col">Date</div>
+    <div class="col">Amount</div>
+  </div>
+
+  <!-- Payment Rows -->
+  <div
+    class="row py-2 border-bottom border-warning text-center payment-hover ml-2"
+    *ngFor="let payment of payments;"
+  >
+    <div class="col text-left">{{ payment.name }}</div>
+    <div class="col text-left">{{ payment.date | date: 'd MMM yyyy' }}</div>
+    <div class="col text-left">${{ payment.amount }}</div>
+  </div>
+
+  <div class="mt-3 text-end">
+    <a
+      routerLink="/payments"
+      class="text-warning text-decoration-underline fw-semibold view-all-link"
+      style="transition: color 0.3s ease;"
+      (mouseover)="hovering = true"
+      (mouseleave)="hovering = false"
+    >
+      View Full Payment History →
+    </a>
+  </div>
+</div>

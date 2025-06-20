@@ -1,0 +1,64 @@
+.fade-row {
+  animation: fadeSlide 1s ease forwards;
+  opacity: 0;
+  animation-delay: 0.2s;
+}
+
+@keyframes fadeSlide {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  transition: all 0.3s ease;
+}
+.fade-in:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 12px rgba(255, 193, 7, 0.15);
+}
+
+/* Entire Card Hover */
+.upcoming-card {
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  border-radius: 10px;
+}
+
+.upcoming-card:hover {
+  box-shadow: 0 0 15px rgba(255, 215, 0, 0.3);
+  transform: translateY(-2px);
+}
+
+/* Each Event Row Hover */
+.event-hover {
+  transition: background-color 0.3s ease, padding-left 0.3s ease;
+    color: black;
+}
+
+.event-hover:hover {
+  background-color:#cdaa35f5;
+  color: black;
+  padding-left: 8px;
+  cursor: pointer;
+}
+.event-hover:hover .text-warning {
+  color: black !important;
+}
+
+.event{
+    background-color: black;
+    color: gold; 
+}
+.view-all-link {
+  color: #ffc107; /* gold */
+  transition: color 0.3s ease;
+}
+
+.view-all-link:hover {
+  color: black;
+}

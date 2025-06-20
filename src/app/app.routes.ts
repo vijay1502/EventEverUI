@@ -8,6 +8,10 @@ import { MainHomeComponent } from './main-home/main-home.component';
 import { AboutComponent } from './about/about.component';
 import { ActivityComponent } from './activity/activity.component';
 import { DiscoverComponent } from './discover/discover.component';
+import { EventOrganizerHomeComponent } from './event-organizer-home/event-organizer-home.component';
+import { FeedBackComponent } from './feed-back/feed-back.component';
+import { CreateEventComponent } from './create-event/create-event.component';
+import { BookEventComponent } from './book-event/book-event.component';
 
 export const routes: Routes = [
     {path:'',component:UserComponent},
@@ -19,5 +23,9 @@ export const routes: Routes = [
     {path:'home-title',component:HomePageComponent},
     {path:'about-eve',component:AboutComponent},
     {path:'activity',component:ActivityComponent},
-    {path:'discover',component:DiscoverComponent}
+    {path:'discover',component:DiscoverComponent},
+    {path: 'eventOrganizer',component:EventOrganizerHomeComponent},
+    {path: 'feedBack',component:FeedBackComponent},
+    {path: 'createEvent',component:CreateEventComponent},
+    {path: 'bookEvent', component: BookEventComponent}
 ];

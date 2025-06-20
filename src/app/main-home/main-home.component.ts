@@ -3,15 +3,16 @@ import { ReusableButtonComponent } from "../shared/reusable-button/reusable-butt
 import { Chart } from 'chart.js/auto';
 import { Router } from '@angular/router';
 import { NAVIGATION_MAP, SIGNIN_BOOL, USER_CHECK_LIST } from '../constants/navigation.constants';
-import { isPlatformBrowser } from '@angular/common';
+import { CommonModule, isPlatformBrowser } from '@angular/common';
 
 @Component({
   selector: 'app-main-home',
-  imports: [ReusableButtonComponent],
+  imports: [ReusableButtonComponent, CommonModule],
   templateUrl: './main-home.component.html',
   styleUrl: './main-home.component.css'
 })
 export class MainHomeComponent implements AfterViewInit{
+trendingSlides: any;
 
 constructor(private router: Router,
   @Inject(PLATFORM_ID) private platformId: Object

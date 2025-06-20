@@ -23,12 +23,6 @@ hr {
   border-color: #cdaa35f5;
 }
 
-.card {
-  background-color: #1e1e1e;
-  color: white;
-  border: 1px solid #cdaa35f5;
-}
-
 .card-header {
   background-color: #1a1a1a;
   color: #cdaa35f5;
@@ -63,7 +57,7 @@ footer a:hover {
 .carousel img {
   width: 100%;
   height: auto;
-  max-height: 220px;
+  max-height: 500px;
   object-fit: cover;
   border-radius: 6px;
 }
@@ -96,4 +90,68 @@ canvas {
   width: 100% !important;
   height: auto !important;
 }
+
+/* Global reset for no borders, clean UI */
+* {
+  box-sizing: border-box;
+}
+body {
+  background-color: #0e0e0e;
+  color: #f0f0f0;
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* Section wrappers (unified look) */
+.section {
+  padding: 2rem 1.5rem;
+  transition: all 0.5s ease;
+}
+
+/* Generic cards or containers */
+.card, .section-box {
+  background-color: #1a1a1a;
+  box-shadow: 0 8px 24px rgba(255, 215, 0, 0.08);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.card:hover, .section-box:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(255, 215, 0, 0.2);
+}
+
+/* Buttons */
+.btn-gold {
+  background: linear-gradient(90deg, #cdaa35, #f1c40f);
+  border: none;
+  color: #000;
+  padding: 0.5rem 1rem;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+.btn-gold:hover {
+  background: linear-gradient(90deg, #f1c40f, #cdaa35);
+}
+
+/* Titles */
+.title {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #cdaa35;
+  margin-bottom: 1rem;
+}
+
+/* Smooth appearance animations */
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1s ease-in-out forwards;
+}
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
 

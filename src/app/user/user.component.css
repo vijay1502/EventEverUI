@@ -8,7 +8,7 @@
 }
 
 body {
-	background: #f6f5f7;
+	background: #FFFFE3;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -46,17 +46,23 @@ a {
 	margin: 15px 0;
 }
 
+button:hover{
+	background-color: #FFFFE3;
+	color: black;
+}
+
 button {
-	border-radius: 20px;
-	border: 1px solid #D4AF37;
-	background-color: #D4AF37;
-	color: #FFFFFF;
-	font-size: 12px;
+	border-radius: 25px;
+	border: 1px solid black;
+	background: black;
+	color: #FFFFE3;
+	font-size: 20px;
+	size: 15px;
 	font-weight: bold;
 	padding: 12px 45px;
 	letter-spacing: 1px;
-	text-transform: uppercase;
 	transition: transform 80ms ease-in;
+
 }
 
 button:active {
@@ -68,12 +74,11 @@ button:focus {
 }
 
 button.ghost {
-	background-color: transparent;
-	border-color: #FFFFFF;
+	border-color: #FFFFE3;
 }
 
 form {
-	background-color: #FFFFFF;
+	background-color: #FFFFE3;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -98,7 +103,7 @@ input {
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
   border-radius: 10px;
   overflow: hidden;
-  background: #fff;
+  background: #FFFFE3;
 }
 
 .container-wrapper {
@@ -106,7 +111,7 @@ input {
   justify-content: center;
   align-items: center;
   /* height: 100vh; Full vertical height */
-  background-color: #f9f9f9;
+  background-color: #FFFFE3;
   /* position: relative;
   transition: transform 0.6s ease-in-out; */
 }
@@ -184,8 +189,8 @@ input {
 
 .overlay {
 	background: black;
-	background: -webkit-linear-gradient(to right, black, #D4AF37);
-	background: linear-gradient(to right, #D4AF37, black);
+	/* background: -webkit-linear-gradient(to right, black, #D4AF37);
+	background: linear-gradient(to right, #D4AF37, black); */
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: 0 0;
@@ -239,7 +244,7 @@ input {
 }
 
 .social-container a {
-	border: 1px solid #DDDDDD;
+	border: 1px solid #FFFFE3;
 	border-radius: 50%;
 	display: inline-flex;
 	justify-content: center;
@@ -272,4 +277,127 @@ footer i {
 footer a {
     color: #3c97bf;
     text-decoration: none;
+}
+.animate-slide-down {
+  animation: slideDown 0.5s ease-in-out;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* Custom coloring inside options */
+.option-customer {
+  background-color: gold;
+  color: black;
+}
+
+.option-organizer {
+  background-color: wheat;
+  color: black;
+}
+
+.option-admin {
+  background-color: whitesmoke;
+  color: black;
+}
+
+.select-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.select-label {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #212529;
+  text-align: center;
+}
+
+.custom-select-oval {
+  width: 250px;
+  padding: 12px 20px;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 1rem;
+  color: #000;
+  background-color: #fff;
+  border: 2px solid #D4AF37;
+  box-shadow: 0 4px 8px rgba(212, 175, 55, 0.2);
+  transition: all 0.3s ease;
+  outline: none;
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23212121' class='bi bi-chevron-down' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  background-size: 1rem;
+}
+
+.custom-select-oval:focus {
+  border-color: #bfa633;
+  box-shadow: 0 0 0 0.2rem rgba(212, 175, 55, 0.3);
+}
+
+.slide-in {
+  animation: slideIn 0.5s ease forwards;
+}
+
+.slide-up-out {
+  animation: slideUpOut 0.5s ease forwards;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+
+@keyframes slideUpOut {
+  from {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+}
+
+.role-dropdown {
+  width: 300px;
+  padding: 0.75rem 1.5rem;
+  border-radius: 50rem;
+  border: 2px solid #D4AF37;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  font-weight: 600;
+  text-align: center;
+  color: #000;
+  transition: all 0.3s ease-in-out;
+}
+
+.role-dropdown:focus {
+  outline: none;
+  border-color: #ffc107;
+  box-shadow: 0 0 0 0.2rem rgba(212, 175, 55, 0.25);
+}
+
+button.btn-outline-primary {
+  border-radius: 20px;
+  font-weight: 500;
+  font-size: 0.9rem;
 }
